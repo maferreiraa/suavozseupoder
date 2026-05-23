@@ -123,3 +123,11 @@ h3{font-size:1.35rem}.lead{font-size:clamp(1.03rem,2vw,1.28rem);color:#f3ead2;ma
 @media(max-width:420px){:root{--bar-height:104px}.urgency-inner{display:grid;grid-template-columns:1fr;gap:6px;padding:8px 0}.countdown-wrap{justify-content:space-between}.countdown-wrap>span{text-align:left;max-width:120px}.countdown span{min-width:43px;padding:6px 4px}.urgency-copy strong{font-size:.77rem}.urgency-copy span,.countdown-wrap>span{font-size:.72rem}.btn{width:100%;font-size:.86rem}.hero-actions,.center-actions{display:grid}.section{padding:58px 0}.section-divider{height:24px}.vertical-video{width:min(100%,330px)}.ticket-card{border-radius:24px}.comparison-table{overflow-x:auto}.row{min-width:540px}.floating-buy{font-size:.82rem}}
 @media(min-width:760px){.video-grid{grid-template-columns:repeat(3,1fr)}.two-videos{grid-template-columns:repeat(2,1fr)}.schedule-grid{grid-template-columns:1fr 1fr}.trainer-grid,.location-grid{grid-template-columns:.9fr 1.1fr;gap:46px}.image-frame img{height:520px}.location-photo img{height:480px}.ticket-card{padding:32px}.ticket-grid{grid-template-columns:.92fr 1.08fr;gap:24px}.start-card{transform:translateY(18px) scale(.985)}.vip-card{transform:scale(1.02)}}
 @media(min-width:980px){:root{--bar-height:64px}.urgency-inner{min-height:var(--bar-height)}.ticket-grid{gap:30px}.section{padding:82px 0}}
+
+.installments {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
