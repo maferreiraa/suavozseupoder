@@ -129,7 +129,7 @@ if (inscricaoForm) {
     localStorage.setItem("ingresso_svsp", JSON.stringify(lead));
 
     try {
-      await fetch(GOOGLE_SCRIPT_URL, {
+      await fetch("https://script.google.com/macros/s/AKfycbx5OVOClj3G3vpjHHg66aIixz4R9P24C1uHN-Sb9oXGZIcQFbBwVcXs2KDV1bi5ppbQ/exec"), {
         method: "POST",
         mode: "no-cors",
         headers: {
