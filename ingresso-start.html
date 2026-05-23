@@ -1,9 +1,422 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ingresso Start | Sua Voz, Seu Poder</title><link rel="stylesheet" href="style.css">
-  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1332486198815609');fbq('track','PageView');fbq('track','Purchase',{value:27.90,currency:'BRL'});</script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1" /></noscript>
-  <style>.ticket-page{min-height:100vh;padding:42px 18px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top,rgba(255,212,59,.16),transparent 35%),#050505}.ticket-wrapper{width:min(100%,560px)}.ticket-card{position:relative;overflow:hidden;border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.025)),#080808;box-shadow:0 30px 100px rgba(0,0,0,.65);padding:28px;text-align:center}.ticket-logo{width:min(240px,76%);margin:0 auto 12px}.ticket-photo{height:160px;margin:0 auto 20px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}.ticket-photo img{width:100%;height:100%;object-fit:cover;object-position:center 12%}.ticket-title{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.4rem);line-height:1;margin:12px 0}.ticket-subtitle{color:#f3ead2}.ticket-info{display:grid;gap:10px;margin:22px 0;color:#f3ead2}.ticket-actions{display:grid;gap:12px;margin-top:22px}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ingresso Start | Sua Voz, Seu Poder</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- META PIXEL -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init','1332486198815609');
+
+    fbq('track','PageView');
+
+    fbq('track','Purchase',{
+      value:27.90,
+      currency:'BRL'
+    });
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
+    />
+  </noscript>
+
+  <style>
+
+    .ticket-page{
+      min-height:100vh;
+      padding:42px 18px;
+      background:
+      radial-gradient(circle at top, rgba(255,212,59,.16), transparent 35%),
+      #050505;
+    }
+
+    .ticket-layout{
+      width:min(1280px,100%);
+      margin:0 auto;
+
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+
+      align-items:start;
+    }
+
+    .ticket-card,
+    .upsell-card{
+      position:relative;
+      overflow:hidden;
+
+      border-radius:32px;
+      border:1px solid rgba(255,255,255,.08);
+
+      background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025)
+      ),
+      #080808;
+
+      box-shadow:0 30px 100px rgba(0,0,0,.65);
+
+      padding:32px;
+    }
+
+    .ticket-logo{
+      width:min(240px,76%);
+      margin:0 auto 12px;
+      display:block;
+    }
+
+    .ticket-photo{
+      height:180px;
+      border-radius:22px;
+      overflow:hidden;
+      margin-bottom:24px;
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .ticket-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 12%;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+
+      background:rgba(255,255,255,.08);
+
+      color:#d4af37;
+
+      font-size:.85rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+
+      margin-bottom:18px;
+    }
+
+    .ticket-title{
+      font-size:clamp(2rem,5vw,3.4rem);
+      line-height:1;
+      margin:10px 0 18px;
+    }
+
+    .ticket-subtitle{
+      color:#f3ead2;
+      line-height:1.6;
+      margin-bottom:26px;
+    }
+
+    .ticket-info{
+      display:grid;
+      gap:12px;
+      margin-top:26px;
+      color:#f3ead2;
+    }
+
+    .upsell-card{
+      border:2px solid #00d26a;
+      background:
+      linear-gradient(
+        180deg,
+        rgba(0,210,106,.16),
+        rgba(255,255,255,.03)
+      ),
+      #080808;
+    }
+
+    .upsell-highlight{
+      display:inline-block;
+
+      background:#00d26a;
+      color:#000;
+
+      padding:10px 16px;
+
+      border-radius:999px;
+
+      font-size:.82rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+
+      margin-bottom:22px;
+    }
+
+    .upsell-price{
+      font-size:3rem;
+      font-weight:900;
+      color:#00d26a;
+      margin:12px 0 8px;
+    }
+
+    .upsell-installments{
+      opacity:.8;
+      margin-bottom:24px;
+    }
+
+    .upsell-list{
+      display:grid;
+      gap:16px;
+      margin:30px 0;
+    }
+
+    .upsell-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      line-height:1.5;
+    }
+
+    .upsell-item strong{
+      color:#00d26a;
+    }
+
+    .upsell-button{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      width:100%;
+
+      min-height:62px;
+
+      border-radius:18px;
+
+      background:#00d26a;
+      color:#000;
+
+      text-decoration:none;
+
+      font-size:1rem;
+      font-weight:900;
+
+      transition:.25s ease;
+    }
+
+    .upsell-button:hover{
+      transform:translateY(-2px);
+      opacity:.92;
+    }
+
+    .back-button{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      width:100%;
+      min-height:54px;
+
+      margin-top:18px;
+
+      border-radius:16px;
+
+      background:#1d1d1d;
+      color:#fff;
+
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    @media(max-width:920px){
+
+      .ticket-layout{
+        grid-template-columns:1fr;
+      }
+
+      .upsell-card{
+        order:-1;
+      }
+
+    }
+
+  </style>
 </head>
-<body><main class="ticket-page"><div class="ticket-wrapper"><section class="ticket-card"><img src="assets/suavozseupoder.png" class="ticket-logo" alt="Sua Voz, Seu Poder"><div class="ticket-photo"><img src="assets/Transbordar_767_1_2_1.webp" alt="Noemiah Alvez"></div><span class="eyebrow center">Ingresso Start confirmado</span><h1 class="ticket-title">Sua vaga está reservada</h1><p class="ticket-subtitle">Apresente as orientações recebidas após a compra no credenciamento do evento.</p><div class="ticket-info"><div><strong>Evento:</strong> Sua Voz, Seu Poder</div><div><strong>Data:</strong> 10 e 11 de junho de 2026</div><div><strong>Local:</strong> Instituto Lyouman — São Paulo/SP</div><div><strong>Tipo:</strong> Ingresso Start</div></div></section><div class="ticket-actions"><a href="index.html" class="btn btn-vip">Voltar para o site</a></div></div></main></body></html>
+
+<body>
+
+  <main class="ticket-page">
+
+    <div class="ticket-layout">
+
+      <!-- CARD START -->
+
+      <section class="ticket-card">
+
+        <img
+          src="assets/suavozseupoder.png"
+          class="ticket-logo"
+          alt="Sua Voz, Seu Poder"
+        >
+
+        <div class="ticket-photo">
+          <img
+            src="assets/Transbordar_767_1_2_1.webp"
+            alt="Noemiah Alvez"
+          >
+        </div>
+
+        <span class="eyebrow">
+          Ingresso Start Confirmado
+        </span>
+
+        <h1 class="ticket-title">
+          Sua vaga está reservada
+        </h1>
+
+        <p class="ticket-subtitle">
+          Seu acesso ao evento foi confirmado com sucesso.
+          Em breve você receberá todas as orientações no WhatsApp.
+        </p>
+
+        <div class="ticket-info">
+
+          <div>
+            <strong>Evento:</strong>
+            Sua Voz, Seu Poder
+          </div>
+
+          <div>
+            <strong>Data:</strong>
+            10 e 11 de Junho de 2026
+          </div>
+
+          <div>
+            <strong>Local:</strong>
+            Instituto Lyouman — São Paulo/SP
+          </div>
+
+          <div>
+            <strong>Tipo:</strong>
+            Ingresso Start
+          </div>
+
+        </div>
+
+        <a href="index.html" class="back-button">
+          Voltar para o site
+        </a>
+
+      </section>
+
+      <!-- UPSELL VIP -->
+
+      <section class="upsell-card">
+
+        <span class="upsell-highlight">
+          Oferta Exclusiva Para Quem Garantiu o Start
+        </span>
+
+        <h2 class="ticket-title">
+          Transforme seu ingresso em uma experiência VIP
+        </h2>
+
+        <p class="ticket-subtitle">
+          Por apenas mais R$ 69,10 você desbloqueia
+          benefícios exclusivos que podem acelerar
+          MUITO os seus resultados após o evento.
+        </p>
+
+        <div class="upsell-price">
+          + R$ 69,10
+        </div>
+
+        <div class="upsell-installments">
+          ou 12x de R$ 7,14
+        </div>
+
+        <div class="upsell-list">
+
+          <div class="upsell-item">
+            ✅
+            <div>
+              <strong>1h de Mentoria Coletiva via Zoom</strong><br>
+              com a Noemiah Alvez após o evento.
+            </div>
+          </div>
+
+          <div class="upsell-item">
+            ✅
+            <div>
+              <strong>Acesso Vitalício às Gravações</strong><br>
+              reveja todas as aulas quando quiser.
+            </div>
+          </div>
+
+          <div class="upsell-item">
+            ✅
+            <div>
+              <strong>Lugares Reservados e Privilegiados</strong><br>
+              nas primeiras fileiras do evento.
+            </div>
+          </div>
+
+          <div class="upsell-item">
+            ✅
+            <div>
+              <strong>Grupo VIP de Networking</strong><br>
+              com empresárias e profissionais selecionadas.
+            </div>
+          </div>
+
+        </div>
+
+        <a
+          href="#COLE_AQUI_O_LINK_DO_UPSELL"
+          class="upsell-button"
+          onclick="fbq('track', 'InitiateCheckout');"
+        >
+          FAZER UPGRADE PARA VIP AGORA
+        </a>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
