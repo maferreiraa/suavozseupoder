@@ -59,7 +59,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-  -->
 
   <!-- GOOGLE ANALYTICS GA4 - cole o ID G-XXXXXXXXXX abaixo desta linha -->
   <!--
@@ -124,7 +123,7 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
           <p class="event-info">📅 10 e 11 de Junho de 2026 • 📍 São Paulo - SP</p>
           <div class="hero-actions stacked-mobile">
             <button type="button" class="btn btn-free abrir-inscricao">Quero minha vaga gratuita</button>
-            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="fbq('track', 'InitiateCheckout');">Quero ser VIP por apenas R$ 97!</a>
+            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="if(window.fbq){fbq('track', 'InitiateCheckout');}">Quero ser VIP por apenas R$ 97!</a>
           </div>
         </div>
       </div>
@@ -199,7 +198,7 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
               <li>1h de mentoria coletiva de alinhamento com Noemiah Alvez via Zoom pós-evento</li>
               <li>Acesso ao Grupo VIP de Networking no Whatsapp</li>
             </ul>
-            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip full" onclick="fbq('track', 'InitiateCheckout');">Quero ser VIP agora (R$ 97)</a>
+            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip full" onclick="if(window.fbq){fbq('track', 'InitiateCheckout');}">Quero ser VIP agora (R$ 97)</a>
           </article>
         </div>
       </div>
@@ -256,7 +255,7 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
           <div class="hero-actions">
             <a href="https://maps.google.com/?q=Instituto+Lyouman+Rua+Vieira+de+Morais+1369+Campo+Belo+São+Paulo" class="btn btn-map" target="_blank" rel="noopener noreferrer">Ver no Google Maps</a>
             <button type="button" class="btn btn-free abrir-inscricao">Inscrição gratuita</button>
-            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="fbq('track', 'InitiateCheckout');">Seja VIP - o palco é seu!</a>
+            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="if(window.fbq){fbq('track', 'InitiateCheckout');}">Seja VIP - o palco é seu!</a>
           </div>
         </div>
       </div>
@@ -287,7 +286,7 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
         <p class="lead">Não deixe para depois a decisão de ocupar o lugar que já é seu por direito. Escolha abaixo como deseja participar:</p>
         <div class="center-actions">
           <button type="button" class="btn btn-free abrir-inscricao">Quero o ingresso gratuito</button>
-          <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="fbq('track', 'InitiateCheckout');">Quero a experiência VIP por R$ 97</a>
+          <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip" onclick="if(window.fbq){fbq('track', 'InitiateCheckout');}">Quero a experiência VIP por R$ 97</a>
         </div>
       </div>
     </section>
@@ -316,8 +315,6 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
     </div>
   </div>
 
-  <script src="script.js"></script>
-
   <div class="floating-cta">
     <div class="floating-cta-content">
       <h3>ÚLTIMAS VAGAS DISPONÍVEIS</h3>
@@ -325,5 +322,6 @@ src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
       <a href="#" class="abrir-inscricao floating-btn">QUERO GARANTIR MINHA VAGA</a>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
