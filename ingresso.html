@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresso | Sua Voz, Seu Poder</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- META PIXEL - cole o código completo do Pixel da Meta abaixo desta linha -->
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1332486198815609');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1332486198815609&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+  <!-- GOOGLE ANALYTICS GA4 - cole o código completo do GA4 abaixo desta linha -->
+
+  <style>
+    .ticket-page{min-height:100vh;padding:42px 18px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top, rgba(255,212,59,.16), transparent 35%),#050505;}
+    .ticket-wrapper{width:min(100%,560px);}
+    .ticket-card{position:relative;overflow:hidden;border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),#080808;box-shadow:0 30px 100px rgba(0,0,0,.65);padding:28px;text-align:center;}
+    .ticket-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top left, rgba(255,212,59,.22), transparent 35%),radial-gradient(circle at bottom right, rgba(255,212,59,.12), transparent 38%);pointer-events:none;}
+    .ticket-content{position:relative;z-index:2;}
+    .ticket-logo{width:min(240px,76%);margin:0 auto 12px;display:block;}
+    .ticket-photo{width:100%;height:160px;margin:0 auto 20px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.4);}
+    .ticket-photo img{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;filter:brightness(.92) contrast(1.06);}
+    .ticket-title{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.4rem);line-height:1;margin:12px 0;color:#fff;}
+    .ticket-subtitle{color:#f3ead2;margin:0 auto 22px;max-width:420px;}
+    .ticket-name{margin:18px 0 4px;font-size:1rem;color:#d9d1c0;text-transform:uppercase;letter-spacing:.08em;font-weight:900;}
+    .ticket-person{font-size:1.55rem;font-weight:950;color:#fff;margin-bottom:14px;word-break:break-word;}
+    .ticket-qr-box{background:#fff;border-radius:22px;padding:16px;width:260px;max-width:100%;margin:24px auto 16px;}
+    .ticket-qr-box img{width:100%;display:block;}
+    .ticket-code{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,212,59,.14);color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:950;letter-spacing:.04em;margin-bottom:18px;}
+    .ticket-info{display:grid;gap:10px;margin:18px 0 8px;color:#f3ead2;font-size:.98rem;}
+    .ticket-info strong{color:var(--gold);}
+    .ticket-actions{display:grid;gap:12px;margin-top:22px;}
+    .ticket-actions .btn{width:100%;}
+    .ticket-note{color:#b9b09c;font-size:.82rem;margin-top:18px;}
+    @media(max-width:480px){.ticket-page{padding:24px 12px;}.ticket-card{border-radius:24px;padding:22px 16px;}.ticket-photo{height:135px;}.ticket-qr-box{width:220px;}}
+  </style>
+</head>
+<body>
+  <main class="ticket-page">
+    <div class="ticket-wrapper">
+      <section class="ticket-card" id="ticketCard">
+        <div class="ticket-content">
+          <img src="assets/suavozseupoder.png" alt="Sua Voz, Seu Poder" class="ticket-logo">
+          <div class="ticket-photo">
+            <img src="assets/Transbordar_767_1_2_1.webp" alt="Noemiah Alvez">
+          </div>
+          <span class="eyebrow center">Ingresso confirmado</span>
+          <h1 class="ticket-title">Sua vaga está reservada</h1>
+          <p class="ticket-subtitle">Apresente este ingresso no credenciamento do evento.</p>
+          <div class="ticket-name">Participante</div>
+          <div class="ticket-person" id="ticketName">Participante</div>
+          <div class="ticket-qr-box"><img id="ticketQr" src="" alt="QR Code do ingresso"></div>
+          <div class="ticket-code" id="ticketCode">SVSP-000000</div>
+          <div class="ticket-info">
+            <div><strong>Evento:</strong> Sua Voz, Seu Poder</div>
+            <div><strong>Data:</strong> 10 e 11 de junho de 2026</div>
+            <div><strong>Local:</strong> Instituto Lyouman — São Paulo/SP</div>
+            <div><strong>Tipo:</strong> Inscrição gratuita</div>
+          </div>
+          <p class="ticket-note">Este QR Code representa o código único da sua inscrição.</p>
+        </div>
+      </section>
+      <div class="ticket-actions">
+        <button class="btn btn-primary" id="downloadTicket">Baixar ingresso como imagem</button>
+        <a href="https://chat.whatsapp.com/HwsM5N0pQluL1ok7XPo3OA" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Entrar no grupo do WhatsApp</a>
+        <a href="index.html" class="btn btn-primary">Voltar para o site</a>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id") || params.get("codigo") || "SVSP-000000";
+    const nome = params.get("nome") || "Participante";
+    const ticketName = document.getElementById("ticketName");
+    const ticketCode = document.getElementById("ticketCode");
+    const ticketQr = document.getElementById("ticketQr");
+    const downloadButton = document.getElementById("downloadTicket");
+    const ticketCard = document.getElementById("ticketCard");
+    ticketName.textContent = nome;
+    ticketCode.textContent = id;
+    ticketQr.src = "https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=" + encodeURIComponent(id);
+    downloadButton.addEventListener("click", async () => {
+      try {
+        const canvas = await html2canvas(ticketCard, {backgroundColor:null, scale:2, useCORS:true});
+        const link = document.createElement("a");
+        link.download = "ingresso-sua-voz-seu-poder-" + id + ".png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      } catch (error) {
+        alert("Não foi possível baixar automaticamente. Tire um print desta tela ou use a opção de imprimir do navegador.");
+      }
+    });
+  </script>
+</body>
+</html>
