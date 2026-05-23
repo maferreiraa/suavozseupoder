@@ -149,12 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         await fetch(GOOGLE_SCRIPT_URL, {
           method: "POST",
-          mode: "cors",
-         headers: {
-  "Content-Type": "application/json"
-},
-body: JSON.stringify(lead)
-        });
+          mode: "no-cors",
+headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify(lead)
+});
       } catch (error) {
         console.log("Erro Google Sheets:", error);
       }
@@ -162,12 +162,12 @@ body: JSON.stringify(lead)
       try {
         await fetch(ZAPDATA_WEBHOOK, {
           method: "POST",
-          mode: "cors",
-          headers: {
-  "Content-Type": "application/json"
-},
-body: JSON.stringify(lead)
-        });
+          mode: "no-cors",
+      headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify(lead)
+});
       } catch (error) {
         console.log("Erro ZapData:", error);
       }
