@@ -1,6 +1,6 @@
 /* SUA VOZ, SEU PODER — script.js
-   Nova versão com Ingresso START e VIP.
-   Mantém URLs e rastreia cliques de checkout no Meta Pixel.
+   Versão com Ingresso START e VIP.
+   Cronômetro fixo + rastreamento de checkout no Meta Pixel.
 */
 
 const GOOGLE_SCRIPT_URL =
@@ -26,11 +26,17 @@ function iniciarContador() {
 
   if (!dias || !horas || !minutos || !segundos) return;
 
-  const agora = new Date();
-  const fim = new Date(agora.getTime() + 48 * 60 * 60 * 1000);
+  const storageKey = "svsp_countdown_end";
+  const agora = Date.now();
+  let fim = Number(localStorage.getItem(storageKey));
+
+  if (!fim || fim <= agora) {
+    fim = agora + 48 * 60 * 60 * 1000;
+    localStorage.setItem(storageKey, String(fim));
+  }
 
   function atualizar() {
-    const distancia = Math.max(0, fim.getTime() - new Date().getTime());
+    const distancia = Math.max(0, fim - Date.now());
     const d = Math.floor(distancia / (1000 * 60 * 60 * 24));
     const h = Math.floor((distancia / (1000 * 60 * 60)) % 24);
     const m = Math.floor((distancia / (1000 * 60)) % 60);

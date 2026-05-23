@@ -55,15 +55,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="urgency-bar" role="banner">
+  <div class="urgency-bar" role="banner" aria-label="Aviso de urgência">
     <div class="urgency-inner">
-      <strong>LOTE DE LANÇAMENTO ATIVO</strong>
-      <span>Ingressos Start por R$ 27,90 e VIP por R$ 97,00 podem virar sem aviso.</span>
-      <div class="countdown" aria-label="Cronômetro de urgência">
-        <span><b id="cd-days">00</b><small>dias</small></span>
-        <span><b id="cd-hours">00</b><small>h</small></span>
-        <span><b id="cd-minutes">00</b><small>min</small></span>
-        <span><b id="cd-seconds">00</b><small>s</small></span>
+      <div class="urgency-copy">
+        <strong>ÚLTIMAS VAGAS • IMERSÃO PRESENCIAL EM SÃO PAULO</strong>
+        <span>10 e 11 de junho • lote atual com valor especial</span>
+      </div>
+      <div class="countdown-wrap">
+        <span>As inscrições encerram em:</span>
+        <div class="countdown" aria-label="Cronômetro de urgência">
+          <span><b id="cd-days">00</b><small>dias</small></span>
+          <span><b id="cd-hours">00</b><small>horas</small></span>
+          <span><b id="cd-minutes">00</b><small>min</small></span>
+          <span><b id="cd-seconds">00</b><small>seg</small></span>
+        </div>
       </div>
     </div>
   </div>
@@ -74,16 +79,18 @@
         <img src="assets/CAPA_noemiah_1.png" class="hero-main-img" alt="Sua Voz, Seu Poder com Noemiah Alvez">
       </div>
       <div class="container hero-content">
+        <img src="assets/suavozseupoder.png" class="hero-logo" alt="Sua Voz, Seu Poder">
         <span class="eyebrow">Imersão presencial • São Paulo</span>
         <h1>Seu conhecimento vale ouro, mas o seu silêncio está custando caro.</h1>
         <p class="lead">Empresárias e profissionais liberais: descubra como transformar o seu saber em autoridade máxima, voz de poder e posicionamento magnético. Saia daqui com um plano de ação para construir um negócio digital mais lucrativo.</p>
-        <div class="event-box">
-          <p><strong>📅 10 e 11 de Junho de 2026</strong> • 📍 Instituto Lyouman, São Paulo - SP</p>
-          <p>Com Noemiah Alvez — Método AVEX: Voe Mais Alto e Reine!</p>
+        <div class="event-pills" aria-label="Informações do evento">
+          <span>📅 10 e 11 de junho</span>
+          <span>📍 São Paulo - SP</span>
+          <span>🎙️ Com Noemiah Alvez</span>
         </div>
         <div class="hero-actions">
-          <a href="#ingressos" class="btn btn-start">Ver Ingresso Start</a>
-          <a href="#ingressos" class="btn btn-vip">Quero a Experiência VIP</a>
+          <a href="#ingressos" class="btn btn-vip">Quero escolher meu ingresso</a>
+          <a href="#vsl" class="btn btn-ghost">Assistir mensagem da Noemiah</a>
         </div>
       </div>
     </section>
@@ -142,41 +149,64 @@
           <p class="lead">O ingresso Start garante sua entrada nos dois dias. O VIP é para quem quer sentar mais perto, rever tudo depois e ter um próximo passo guiado com a Noemiah.</p>
         </div>
 
-        <div class="ticket-grid">
+        <div class="ticket-grid" aria-label="Comparativo dos ingressos Start e VIP">
           <article class="ticket-card start-card">
-            <span class="ticket-label">Ingresso</span>
-            <h3>START</h3>
-            <p class="ticket-desc">Para quem quer participar da imersão presencial com investimento acessível e estar no ambiente certo.</p>
-            <div class="price-block">
+            <div class="ticket-head">
+              <span class="ticket-label">Ingresso de entrada</span>
+              <h3>START</h3>
+              <p class="ticket-desc">Para participar da imersão presencial com investimento acessível e estar no ambiente certo.</p>
+            </div>
+
+            <div class="price-block start-price">
               <small>por apenas</small>
               <strong>R$ 27,90</strong>
             </div>
-            <a href="https://pay.kiwify.com.br/6jYbGbk" class="btn btn-start full checkout-link" data-ticket="Start" data-value="27.90">Comprar Ingresso Start</a>
-            <ul class="benefits">
+
+            <ul class="benefits included">
               <li>Acesso aos 2 dias de evento em São Paulo</li>
               <li>Comunidade de avisos no WhatsApp</li>
             </ul>
+
+            <div class="loss-box">
+              <p>Você entra no evento, mas fica sem estes privilégios:</p>
+              <ul class="benefits missed">
+                <li>Lugares reservados nas primeiras fileiras</li>
+                <li>Acesso vitalício às gravações do evento</li>
+                <li>1h de mentoria coletiva com Noemiah via Zoom</li>
+                <li>Grupo VIP de Networking no WhatsApp</li>
+              </ul>
+            </div>
+
+            <a href="https://pay.kiwify.com.br/6jYbGbk" class="btn btn-start-subtle full checkout-link" data-ticket="Start" data-value="27.90">Comprar Ingresso Start</a>
           </article>
 
           <article class="ticket-card vip-card">
-            <span class="recommended">Mais completo</span>
-            <span class="ticket-label">Ingresso</span>
-            <h3>VIP</h3>
-            <p class="ticket-desc">Para quem quer viver a imersão mais de perto, com privilégios de assento, gravações e mentoria coletiva.</p>
+            <span class="recommended">Mais escolhido</span>
+            <div class="ticket-head">
+              <span class="ticket-label">Experiência completa</span>
+              <h3>VIP</h3>
+              <p class="ticket-desc">Para viver a imersão mais de perto, com assento privilegiado, gravações e mentoria coletiva.</p>
+            </div>
+
             <div class="price-block vip-price">
               <small>por apenas</small>
               <strong>R$ 97,00</strong>
             </div>
-            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip full checkout-link" data-ticket="VIP" data-value="97.00">Quero ser VIP agora</a>
-            <ul class="benefits">
-              <li>Tudo do ingresso START +</li>
+
+            <div class="vip-bonus">✨ Tudo do ingresso START +</div>
+
+            <ul class="benefits vip-benefits">
               <li>Lugares reservados e privilegiados nas primeiras fileiras</li>
               <li>Acesso vitalício às gravações do evento para rever quando quiser</li>
               <li>1h de mentoria coletiva de alinhamento com Noemiah Alvez via Zoom pós-evento</li>
               <li>Acesso ao Grupo VIP de Networking no WhatsApp</li>
             </ul>
+
+            <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip full checkout-link" data-ticket="VIP" data-value="97.00">Quero ser VIP agora</a>
           </article>
         </div>
+
+        <p class="secure-note">🔒 Pagamento 100% seguro pela Kiwify. Você será redirecionada para a plataforma de pagamento.</p>
       </div>
     </section>
 
@@ -260,13 +290,14 @@
     <section class="section faq-section" id="faq">
       <div class="container narrow">
         <div class="center-text">
-          <span class="eyebrow center">Perguntas Frequentes</span>
-          <h2>FAQ</h2>
+          <span class="eyebrow center">Dúvidas frequentes</span>
+          <h2>Por que o investimento é tão acessível?</h2>
         </div>
         <div class="faq-list">
-          <details open><summary>Por que o ingresso Start custa só R$ 27,90?</summary><p>Porque este lote foi pensado para diminuir a barreira de entrada e lotar a sala com mulheres prontas para se posicionar. O valor simbólico ajuda a confirmar compromisso, organizar a operação do evento e evitar inscrições sem comparecimento.</p></details>
-          <details><summary>Então o evento é “barato demais”? Tem pegadinha?</summary><p>Não. O evento é presencial e real. A estratégia é tornar o acesso mais simples no ingresso Start e oferecer uma experiência mais completa no VIP para quem deseja mais proximidade, gravações e acompanhamento pós-evento.</p></details>
+          <details open><summary>Por que o ingresso Start custa apenas R$ 27,90?</summary><p>Porque este lote foi pensado para diminuir a barreira de entrada e lotar a sala com mulheres prontas para se posicionar. O valor simbólico ajuda a confirmar compromisso, organizar a operação do evento e evitar inscrições sem comparecimento.</p></details>
+          <details><summary>Então o evento é “barato demais”? Tem pegadinha?</summary><p>Não. O evento é presencial e real. A estratégia é tornar o acesso mais simples no ingresso Start e oferecer uma experiência mais completa no VIP para quem deseja proximidade, gravações e acompanhamento pós-evento.</p></details>
           <details><summary>Qual é a diferença entre Start e VIP?</summary><p>O Start dá acesso aos dois dias presenciais e à comunidade de avisos. O VIP inclui tudo isso e ainda adiciona lugares privilegiados nas primeiras fileiras, gravações vitalícias, mentoria coletiva de 1h com Noemiah e grupo VIP de networking.</p></details>
+          <details><summary>Vale a pena escolher o VIP?</summary><p>Sim, se você quer sentar mais perto, rever o conteúdo com calma depois do evento, participar de uma mentoria coletiva pós-evento e se conectar com outras mulheres em um grupo VIP de networking.</p></details>
           <details><summary>Para quem é este evento?</summary><p>Para empresárias, mentoras, psicólogas, advogadas, médicas, consultoras e profissionais liberais que desejam usar comunicação, autoridade e posicionamento para monetizar conhecimento no digital.</p></details>
           <details><summary>Posso comprar mais de um ingresso?</summary><p>Sim. Cada participante precisa ter seu próprio ingresso com seus dados para facilitar o credenciamento e a comunicação oficial do evento.</p></details>
           <details><summary>O evento terá transmissão online?</summary><p>Não. A experiência é presencial em São Paulo. Quem compra o ingresso VIP recebe acesso vitalício às gravações depois do evento.</p></details>
@@ -284,7 +315,7 @@
         <h2>Sua voz pode ser o ponto de virada da sua história.</h2>
         <p class="lead">Não deixe para depois a decisão de ocupar o lugar que já é seu por direito. Escolha abaixo como deseja participar:</p>
         <div class="center-actions">
-          <a href="https://pay.kiwify.com.br/6jYbGbk" class="btn btn-start checkout-link" data-ticket="Start" data-value="27.90">Comprar Start por R$ 27,90</a>
+          <a href="https://pay.kiwify.com.br/6jYbGbk" class="btn btn-start-subtle checkout-link" data-ticket="Start" data-value="27.90">Comprar Start por R$ 27,90</a>
           <a href="https://pay.kiwify.com.br/saSkvXX" class="btn btn-vip checkout-link" data-ticket="VIP" data-value="97.00">Comprar VIP por R$ 97</a>
         </div>
       </div>
